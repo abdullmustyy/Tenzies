@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body {
+  background-color: #cdc8f2;
+  font-family: 'Karla', sans-serif;
+  position: relative;
+}
+
+.header {
+  box-shadow: 0 2px 2px gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+}
+
+.header--title {
+  color: #5035FF;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.tenzie {
+  background: #0B2434;
+  background: #5035FF;
+  display: flex;
+  height: 379px;
+  max-width: 360px;
+  margin: auto;
+}
+
+.tenzie--cont {
+  background: #F5F5F5;
+  border-radius: 10px;
+  width: 320px;
+  height: 320px;
+  margin: auto;
+}
