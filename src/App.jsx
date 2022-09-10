@@ -11,7 +11,9 @@ export default function App() {
     const allHeld = allDice.every((die) => die.held);
     const allSameNumber = allDice.every((die) => die.value === firstDieValue);
     if (allHeld && allSameNumber) {
-      setTenzies((prevTenzies) => !prevTenzies);
+      setTenzies(true);
+    } else {
+      setTenzies(false);
     }
   }, [allDice]);
 
@@ -43,7 +45,7 @@ export default function App() {
   function rollUnheldDie() {
     if (tenzies) {
       setAllDice(allDiceAray());
-      setTenzies((prevTenzies) => !prevTenzies);
+      setTenzies(false);
     } else {
       setAllDice((prevDiceArray) =>
         prevDiceArray.map((die) =>

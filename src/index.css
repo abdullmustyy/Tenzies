@@ -42,7 +42,8 @@ body {
 
 /* ==============MAIN============== */
 .tenzie {
-  background: #5035FF;
+  background: linear-gradient(#5035FF, #cdc8f2, #5035FF);
+  background: linear-gradient(#cdc8f2, #5035FF, #cdc8f2);
   border-radius: 10px;
   box-shadow: 0 2px 10px #0B2434;
   display: flex;
