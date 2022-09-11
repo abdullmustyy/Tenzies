@@ -84,6 +84,18 @@ body {
   color: #4A4E74;
 }
 
+.tenzie--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13.1072px;
+  line-height: 16px;
+  letter-spacing: -0.03em;
+  color: red;
+}
+
 .tenzie--dice-section {
   height: 80%;
   display: flex;

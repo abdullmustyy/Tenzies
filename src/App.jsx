@@ -5,6 +5,7 @@ import Dice from "../components/Dice";
 export default function App() {
   const [allDice, setAllDice] = useState(allDiceAray());
   const [tenzies, setTenzies] = useState(false);
+  const [invalidRoll, setInvalidRoll] = useState(false);
 
   useEffect(() => {
     const firstDieValue = allDice[0].value;
@@ -12,6 +13,7 @@ export default function App() {
     const allSameNumber = allDice.every((die) => die.value === firstDieValue);
     if (allHeld && allSameNumber) {
       setTenzies(true);
+      setInvalidRoll(false);
     } else {
       setTenzies(false);
     }
@@ -47,6 +49,11 @@ export default function App() {
       setAllDice(allDiceAray());
       setTenzies(false);
     } else {
+      if (allDice.every((die) => die.held) && !tenzies) {
+        setInvalidRoll(true);
+      } else {
+        setInvalidRoll(false);
+      }
       setAllDice((prevDiceArray) =>
         prevDiceArray.map((die) =>
           die.held ? die : { ...die, value: randomDieNumber() }
@@ -71,6 +78,12 @@ export default function App() {
             rollUnheldDie={rollUnheldDie}
             tenzies={tenzies}
           />
+          {invalidRoll && (
+            <p className="tenzie--error">
+              <span>🚩</span>{" "}
+              <span>Invalid roll; All dice aren't the same!</span>
+            </p>
+          )}
         </div>
       </div>
       <p className="footer--text">Built with 💟 in Naij.</p>
