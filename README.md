@@ -6,4 +6,6 @@ The world’s fastest game! Everyone gets ten dice. Someone says, “Go.” Then
 
 ![Tenzies Picture](./src/assets/tenzies-pics2.png "Tenzies")
 
+![Tenzies Picture](./src/assets/tenzies-pics3.png "Tenzies Error")
+
 - [Live site ↗](https://abdul-tenzies.netlify.app/)
