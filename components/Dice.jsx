@@ -20,7 +20,7 @@ export default function Dice({ allDice, holdDie, rollUnheldDie, tenzies }) {
     <section className="tenzie--dice-section">
       <div className="tenzie--grid">{diceElements}</div>
       <button className="tenzie--btn" onClick={rollUnheldDie}>
-        {tenzies ? "Reset Game" : "Roll"}
+        {tenzies ? "Reset" : "Roll"}
       </button>
     </section>
   );
