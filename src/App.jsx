@@ -84,6 +84,7 @@ export default function App() {
               <span>Invalid roll; All dice aren't the same!</span>
             </p>
           )}
+          {tenzies && <p className="tenzie--check">✅</p>}
         </div>
       </div>
       <p className="footer--text">Built with 💟 in Naij.</p>
