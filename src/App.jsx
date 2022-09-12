@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 import Header from "../components/Header";
 import Dice from "../components/Dice";
@@ -8,7 +7,6 @@ export default function App() {
   const [allDice, setAllDice] = useState(allDiceAray());
   const [tenzies, setTenzies] = useState(false);
   const [invalidRoll, setInvalidRoll] = useState(false);
-  const { width, height } = useWindowSize();
 
   useEffect(() => {
     const firstDieValue = allDice[0].value;
@@ -67,7 +65,7 @@ export default function App() {
 
   return (
     <section className="section">
-      {tenzies && <Confetti width={width} height={height} />}
+      {tenzies && <Confetti />}
       <Header />
       <div className="tenzie">
         <div className="tenzie--cont">
