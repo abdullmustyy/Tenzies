@@ -9,7 +9,7 @@
 
 body {
   background-color: #cdc8f2;
-  background-image: url(./assets/casino.png);
+  /* background-image: url(./assets/casino.png); */
   background-repeat: no-repeat;
   background-position: bottom -10rem left 0;
   background-size: 100% 90%;
@@ -50,6 +50,12 @@ body {
   height: 379px;
   max-width: 360px;
   margin: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .tenzie {
+    margin: 2rem auto 0;
+  }
 }
 
 .tenzie--cont {
